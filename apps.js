@@ -16,7 +16,7 @@ do{
 console.log("Nota válida: " + nota);
 
  */
-const r = require('readline-sync');
+/* const r = require('readline-sync');
 //variaveis
 let soma = 0;
 let contador = 1;
@@ -39,7 +39,21 @@ let media = soma / 5;
 
 //exibir a media
 console.log("A mmedia e: " + media.toFixed(2)); // toFixed(2) para exibir a media com 2 casas decimais
+ */
+const r = require('readline-sync');
 
+//media com do while
 
+let somaDoWhile = 0;
+let contadorDoWhile = 1;
+
+do {
+    let nota = parseFloat(r.question(`nota ${contadorDoWhile}: `));
+    somaDoWhile += nota;
+    contadorDoWhile++;
+ } while (contadorDoWhile <= 5);
+
+let mediaDoWhile = somaDoWhile / 5;
+console.log("A media do while e: " + mediaDoWhile.toFixed(2));
 
 
